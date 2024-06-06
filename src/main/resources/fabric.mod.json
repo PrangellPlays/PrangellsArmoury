@@ -3,20 +3,19 @@
 	"id": "prangellsarmoury",
 	"version": "${version}",
 	"name": "Prangells Armoury",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Adding armour, tools and weapons to Minecraft",
 	"authors": [
-		"Me!"
+		"Owner - PrangellPlays"
 	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "CC0-1.0",
+	"license": "PrangellPlays",
 	"icon": "assets/prangellsarmoury/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"dev.prangellplays.prangellsarmoury.PrangellsArmoury"
+		],
+		"client": [
+			"dev.prangellplays.prangellsarmoury.PrangellsArmouryClient"
 		],
 		"fabric-datagen": [
 			"dev.prangellplays.prangellsarmoury.PrangellsArmouryDataGenerator"

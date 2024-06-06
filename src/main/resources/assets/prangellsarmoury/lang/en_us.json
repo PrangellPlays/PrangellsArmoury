@@ -1,0 +1,8 @@
+{
+  "_comment": "Items",
+  "item.prangellsarmoury.plasmythic_longsword": "§5Plasmythic Longsword",
+  "item.prangellsarmoury.plasmythic_scythe": "§5Plasmythic Scythe",
+
+  "_comment": "Item Groups",
+  "itemgroup.items": "Prangells Armoury"
+}

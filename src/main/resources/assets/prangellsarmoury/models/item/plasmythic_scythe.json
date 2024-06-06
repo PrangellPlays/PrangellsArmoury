@@ -1,0 +1,33 @@
+{
+	"parent": "minecraft:item/handheld",
+	"textures": {
+		"layer0": "prangellsarmoury:item/weapons/plasmythic_scythe"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [-45, -90, 0],
+			"translation": [0.25, 1.25, -0.5],
+			"scale": [2, 2, 1]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [-45, 90, 0],
+			"translation": [0.25, 1.25, -0.5],
+			"scale": [2, 2, 1]
+		},
+		"firstperson_righthand": {
+			"rotation": [-45, -75, 0],
+			"translation": [1.25, 4.25, 0]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-45, 91, 0],
+			"translation": [1.25, 4.25, 0]
+		},
+		"ground": {
+			"rotation": [90, 0, 0]
+		},
+		"head": {
+			"rotation": [0, 0, 78.5],
+			"translation": [0, 13.75, 0]
+		}
+	}
+}
