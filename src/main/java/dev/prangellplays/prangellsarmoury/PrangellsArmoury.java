@@ -1,5 +1,6 @@
 package dev.prangellplays.prangellsarmoury;
 
+import dev.prangellplays.prangellsarmoury.registry.PrangellsArmouryEnchantments;
 import dev.prangellplays.prangellsarmoury.registry.PrangellsArmouryItemGroups;
 import dev.prangellplays.prangellsarmoury.registry.PrangellsArmouryItems;
 import net.fabricmc.api.ModInitializer;
@@ -17,6 +18,7 @@ public class PrangellsArmoury implements ModInitializer {
 	public void onInitialize() {
 		PrangellsArmouryItems.init();
 		PrangellsArmouryItemGroups.init();
+		PrangellsArmouryEnchantments.init();
 	}
 
 	public static Identifier id(String path) {

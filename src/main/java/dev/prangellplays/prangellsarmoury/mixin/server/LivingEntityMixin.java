@@ -1,5 +1,6 @@
 package dev.prangellplays.prangellsarmoury.mixin.server;
 
+import dev.prangellplays.prangellsarmoury.item.weapon.plasmythic.PlasmythicLongswordItem;
 import dev.prangellplays.prangellsarmoury.registry.PrangellsArmouryItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -24,7 +25,7 @@ public abstract class LivingEntityMixin extends Entity {
     private void getHandSwingDuration(CallbackInfoReturnable<Integer> info) {
         LivingEntity livingEntity = (LivingEntity) (Object) this;
         ItemStack itemStack = livingEntity.getMainHandStack();
-        if (itemStack.isOf(PrangellsArmouryItems.PLASMYTHIC_LONGSWORD)) {
+        if (itemStack.getItem() instanceof PlasmythicLongswordItem) {
             info.setReturnValue(10);
         }
     }
@@ -34,7 +35,7 @@ public abstract class LivingEntityMixin extends Entity {
     private void blockedByShieldMixin(DamageSource source, CallbackInfoReturnable<Boolean> info) {
         LivingEntity livingEntity = (LivingEntity) (Object) this;
         ItemStack itemStack = livingEntity.getMainHandStack();
-        if (itemStack.isOf(PrangellsArmouryItems.PLASMYTHIC_LONGSWORD)) {
+        if (itemStack.getItem() instanceof PlasmythicLongswordItem) {
             info.setReturnValue(false);
         }
     }
@@ -43,7 +44,7 @@ public abstract class LivingEntityMixin extends Entity {
     private void blockedByShieldDamageWeaponMixin(DamageSource source, CallbackInfoReturnable<Boolean> info) {
         LivingEntity livingEntity = (LivingEntity) (Object) this;
         ItemStack itemStack = livingEntity.getActiveItem();
-        if (itemStack.isOf(PrangellsArmouryItems.PLASMYTHIC_LONGSWORD)) {
+        if (itemStack.getItem() instanceof PlasmythicLongswordItem) {
             if (livingEntity instanceof PlayerEntity) {
                 ((PlayerEntity) livingEntity).getItemCooldownManager().set(itemStack.getItem(), 60);
             }

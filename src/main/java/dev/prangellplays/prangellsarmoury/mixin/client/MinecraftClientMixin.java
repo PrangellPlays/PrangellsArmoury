@@ -1,5 +1,6 @@
 package dev.prangellplays.prangellsarmoury.mixin.client;
 
+import dev.prangellplays.prangellsarmoury.item.weapon.plasmythic.PlasmythicLongswordItem;
 import dev.prangellplays.prangellsarmoury.registry.PrangellsArmouryItems;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -46,7 +47,7 @@ public class MinecraftClientMixin {
     private void doAttackMixin(CallbackInfoReturnable<Boolean> info) {
         if (player != null) {
                 ItemStack itemStack = player.getMainHandStack();
-                if ((itemStack.isOf(PrangellsArmouryItems.PLASMYTHIC_LONGSWORD)) && (!player.getOffHandStack().isEmpty() || player.isSwimming() || player.hasVehicle()))
+                if (itemStack.getItem() instanceof PlasmythicLongswordItem && (!player.getOffHandStack().isEmpty() || player.isSwimming() || player.hasVehicle()))
                     info.setReturnValue(false);
             }
         }
@@ -55,7 +56,7 @@ public class MinecraftClientMixin {
     private void doItemUseMixin(CallbackInfo info) {
         if (player != null) {
             ItemStack itemStack = player.getMainHandStack();
-            if ((itemStack.isOf(PrangellsArmouryItems.PLASMYTHIC_LONGSWORD)) && (!player.getOffHandStack().isEmpty() || player.isSwimming() || player.hasVehicle()))
+            if (itemStack.getItem() instanceof PlasmythicLongswordItem && (!player.getOffHandStack().isEmpty() || player.isSwimming() || player.hasVehicle()))
                 info.cancel();
         }
     }
@@ -64,7 +65,7 @@ public class MinecraftClientMixin {
     private void handleBlockBreakingMixin(boolean bl, CallbackInfo info) {
         if (player != null) {
             ItemStack itemStack = player.getMainHandStack();
-            if ((itemStack.isOf(PrangellsArmouryItems.PLASMYTHIC_LONGSWORD)) && (!player.getOffHandStack().isEmpty() || player.isSwimming() || player.hasVehicle()))
+            if (itemStack.getItem() instanceof PlasmythicLongswordItem && (!player.getOffHandStack().isEmpty() || player.isSwimming() || player.hasVehicle()))
                 info.cancel();
         }
     }

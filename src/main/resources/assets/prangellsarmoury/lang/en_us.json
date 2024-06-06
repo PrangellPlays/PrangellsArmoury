@@ -3,6 +3,9 @@
   "item.prangellsarmoury.plasmythic_longsword": "§5Plasmythic Longsword",
   "item.prangellsarmoury.plasmythic_scythe": "§5Plasmythic Scythe",
 
+  "_comment": "Enchantments",
+  "enchantment.prangellsarmoury.dash": "§aDash",
+
   "_comment": "Item Groups",
   "itemgroup.items": "Prangells Armoury"
 }

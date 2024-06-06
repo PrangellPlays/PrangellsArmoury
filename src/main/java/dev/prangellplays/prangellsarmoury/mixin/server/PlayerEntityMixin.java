@@ -1,6 +1,7 @@
 package dev.prangellplays.prangellsarmoury.mixin.server;
 
 import com.mojang.authlib.GameProfile;
+import dev.prangellplays.prangellsarmoury.item.weapon.plasmythic.PlasmythicLongswordItem;
 import dev.prangellplays.prangellsarmoury.registry.PrangellsArmouryItems;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -20,7 +21,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
     @Override
     public boolean disablesShield() {
         ItemStack itemStack = this.getMainHandStack();
-        return super.disablesShield() || itemStack.isOf(PrangellsArmouryItems.PLASMYTHIC_LONGSWORD);
+        return super.disablesShield() || itemStack.getItem() instanceof PlasmythicLongswordItem;
     }
 
 }
